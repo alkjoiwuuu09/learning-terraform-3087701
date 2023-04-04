@@ -41,10 +41,9 @@ module "blog_sg" {
 
   egress_rules       = ["all-all"]
   egress_cidr_blocks = ["0.0.0.0/0"]
-
-
 }
 
+/*
 resource "aws_security_group" "blog" {
   name = "blog"
   tags = {
@@ -52,6 +51,7 @@ resource "aws_security_group" "blog" {
   }
   vpc_id = data.aws_vpc.default.id
 }
+
 
 resource "aws_security_group_rule" "blog_http_in" {
   type        = "ingress"
@@ -81,3 +81,4 @@ resource "aws_security_group_rule" "blog_everything_out" {
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.blog.id
 }
+*/
